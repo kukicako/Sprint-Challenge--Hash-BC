@@ -23,12 +23,41 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
-* What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
-* What is the worse case scenario if you try to extend the storage size of a dynamic array?
+    -- dynamic arrows grow when you insert (x2 in most cases). Static array already has predetermined length/storage so it size cant be altered
 
-Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+* What is the runtime complexity to access an array
+    -- O(1)
+
+, add or remove from the front, and add or remove from the back?
+    --usually it is O(1) since  you dont have to shift indices. but if you add an item it can also be O(n) if the array has run outta storage.
+
+* What is the worse case scenario if you try to extend the storage size of a dynamic array?
+    -- you add an item making it o(n) so then it has to copy all the        items from the first array into the new one.
+
+Explain how a blockchain is structured.
+    --data structure that keeps public ledger of transactions but even tho it is public the cryptography keeps it secure. used for crpytocurrency.
+
+What are the blocks,
+    -- block is file where data is permenantly stored
+        contains index number/timestamp/transactions/proof/prev-hash
  
-Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+what is the chain? 
+    -- stores the hash data of the prev block creating a long chain. If     you tried to change one of them to give yourself an advantage then it would change all of them
+  
+How is the data organized?
+    -- first block (genisis block) contains arbirtrary hash
+        All the data in the first block is hashed into a hash that is stored in the second block and then it keeps on goin
+
+ 
+Explain how proof of work functions.
+ How does it operate. 
+    -- proof of work is code that is recorded in blocks that require a crap ton of computing power to generate. 
+
+ How does this protect the chain from attack.
+    --impossible to add valid block without valid proof of work
+    manipulating the transactions gets messed up cause the next block is signed with a diff proof of work
+ What kind of attack is possible?
+    -- if one person controls more than half then they are able to control the decentralized network
 
 ## Project Set Up
 

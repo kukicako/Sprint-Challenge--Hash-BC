@@ -23,7 +23,7 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
-    proof = 666
+    proof = 66666666
     last_hash = f'{last_proof}'.encode()
     hash_obj = hashlib.sha256(last_hash).hexdigest()
 
